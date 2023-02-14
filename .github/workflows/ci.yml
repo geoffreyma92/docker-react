@@ -22,6 +22,7 @@ jobs:
           environment_name: Dockerreact-env
           version_label: Sample Application
           region: ap-southeast-2
+          deployment_package: docker.zip
         
     
         

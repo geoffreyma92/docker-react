@@ -1,0 +1,24 @@
+# Get a copy of docker running 
+# Build Dockerfile.dev
+# Run test suite
+# Deploy code to AWS
+name: CI
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Dockerfile.dev
+        run: docker build -t geoffreyma92/docker-react -f Dockerfile.dev .
+      - name: Run test in container
+        run: docker run geoffreyma92/docker-react npm test -- --coverage
+        
+    
+        
+        
+    
+      
+    
+
+  
